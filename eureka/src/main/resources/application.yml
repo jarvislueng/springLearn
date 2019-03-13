@@ -1,0 +1,12 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+#    register-with-eureka, fetch-registry都为false，声明这个工程是一个eurekaServer工程
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
