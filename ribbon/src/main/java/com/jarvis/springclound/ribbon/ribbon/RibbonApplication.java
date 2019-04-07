@@ -1,7 +1,7 @@
 package com.jarvis.springclound.ribbon.ribbon;
 
 import com.jarvis.springclound.ribbon.ribbon.service.ExcludeAnnotation;
-import com.jarvis.springclound.ribbon.ribbon.service.RibbonClientService;
+//import com.jarvis.springclound.ribbon.ribbon.service.RibbonClientService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
