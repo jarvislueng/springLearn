@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+        #配置git仓库地址
+          uri: https://github.com/jarvislueng/springLearn/
+          #仓库路径，想到于把配置文件放到https://github.com/jarvislueng/springLearn/config-repo中
+          search-paths: config-repo
+      #git分支
+      label: master
+server:
+  port: 8888
+
+  #spring.cloud.config.server.git.username：访问git仓库的用户名
+  #spring.cloud.config.server.git.password：访问git仓库的用户密码
+
+
+
+  http请求地址和资源文件映射如下:
+
+  /{application}/{profile}[/{label}]
+  /{application}-{profile}.yml
+  /{label}/{application}-{profile}.yml
+  /{application}-{profile}.properties
+  /{label}/{application}-{profile}.properties
